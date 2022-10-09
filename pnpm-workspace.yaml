@@ -1,0 +1,6 @@
+packages:
+  - apps/admin
+  - apps/front
+  - packages/admin-api
+  - packages/front-api
+  - packages/db
