@@ -12,6 +12,8 @@
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
+    "cleen",
+    "manypkg",
     "netr",
     "superjson",
     "tailwindcss",

@@ -13,7 +13,7 @@ const defineNextConfig = (config) => {
   return config;
 };
 
-export default withTM(["@netr/front-api", "@netr/db"])(
+export default withTM(["@netr/front-api", "@netr/auth", "@netr/db"])(
   defineNextConfig({
     reactStrictMode: true,
     swcMinify: true,

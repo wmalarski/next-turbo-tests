@@ -10,9 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netr/front-api": "*",
-    "@netr/db": "*",
     "@netr/auth": "*",
+    "@netr/db": "*",
+    "@netr/front-api": "*",
     "@tanstack/react-query": "^4.10.3",
     "@trpc/client": "10.0.0-proxy-beta.13",
     "@trpc/next": "10.0.0-proxy-beta.13",
