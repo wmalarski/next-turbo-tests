@@ -9,9 +9,9 @@ import withTM from "next-transpile-modules";
  * @param {T} config - A generic parameter that flows through to the return type
  * @constraint {{import('next').NextConfig}}
  */
-function defineNextConfig(config) {
+const defineNextConfig = (config) => {
   return config;
-}
+};
 
 export default withTM(["@netr/front-api", "@netr/db"])(
   defineNextConfig({

@@ -1,11 +1,10 @@
-import type { AppRouter } from "@netr/front-api";
-import type { inferProcedureOutput } from "@trpc/server";
+import type { AppRouterTypes } from "@netr/front-api";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { trpc } from "../utils/trpc";
 
 const PostCard: React.FC<{
-  post: inferProcedureOutput<AppRouter["post"]["all"]>[number];
+  post: AppRouterTypes["post"]["all"]["output"][number];
 }> = ({ post }) => {
   return (
     <div className="p-4 border-2 border-gray-500 rounded-lg max-w-2xl">
