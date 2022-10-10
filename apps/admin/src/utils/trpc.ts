@@ -1,8 +1,8 @@
 // src/utils/trpc.ts
+import type { AppRouter } from "@netr/admin-api";
+import { transformer } from "@netr/admin-api/transformer";
 import { httpBatchLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
-import type { AppRouter } from "../../../../packages/front-api";
-import { transformer } from "../../../../packages/front-api/transformer";
 
 const getBaseUrl = () => {
   if (typeof window !== "undefined") return ""; // browser should use relative url

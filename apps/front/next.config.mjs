@@ -1,5 +1,4 @@
 // @ts-check
-import { env } from "./src/env/server.mjs";
 import withTM from "next-transpile-modules";
 
 /**
