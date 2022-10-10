@@ -15,6 +15,7 @@ importers:
   apps/admin:
     specifiers:
       '@netr/admin-api': '*'
+      '@netr/auth': '*'
       '@netr/db': '*'
       '@tanstack/react-query': ^4.7.2
       '@trpc/client': 10.0.0-proxy-beta.13
@@ -39,6 +40,7 @@ importers:
       zod: ^3.18.0
     dependencies:
       '@netr/admin-api': link:../../packages/admin-api
+      '@netr/auth': link:../../packages/auth
       '@netr/db': link:../../packages/db
       '@tanstack/react-query': 4.9.0_ef5jwxihqo6n7gxfmzogljlgcm
       '@trpc/client': 10.0.0-proxy-beta.13_itipy43llokwyezwccgik4t2sm
@@ -65,6 +67,7 @@ importers:
 
   apps/front:
     specifiers:
+      '@netr/auth': '*'
       '@netr/db': '*'
       '@netr/front-api': '*'
       '@tanstack/react-query': ^4.7.2
@@ -89,6 +92,7 @@ importers:
       typescript: ^4.8.3
       zod: ^3.18.0
     dependencies:
+      '@netr/auth': link:../../packages/auth
       '@netr/db': link:../../packages/db
       '@netr/front-api': link:../../packages/front-api
       '@tanstack/react-query': 4.9.0_ef5jwxihqo6n7gxfmzogljlgcm
@@ -116,6 +120,7 @@ importers:
 
   packages/admin-api:
     specifiers:
+      '@netr/auth': '*'
       '@netr/db': '*'
       '@trpc/client': 10.0.0-proxy-beta.13
       '@trpc/server': 10.0.0-proxy-beta.13
@@ -123,6 +128,7 @@ importers:
       typescript: ^4.8.3
       zod: ^3.18.0
     dependencies:
+      '@netr/auth': link:../auth
       '@netr/db': link:../db
       '@trpc/client': 10.0.0-proxy-beta.13_itipy43llokwyezwccgik4t2sm
       '@trpc/server': 10.0.0-proxy-beta.13
@@ -167,6 +173,7 @@ importers:
 
   packages/front-api:
     specifiers:
+      '@netr/auth': '*'
       '@netr/db': '*'
       '@trpc/client': 10.0.0-proxy-beta.13
       '@trpc/server': 10.0.0-proxy-beta.13
@@ -174,6 +181,7 @@ importers:
       typescript: ^4.8.3
       zod: ^3.18.0
     dependencies:
+      '@netr/auth': link:../auth
       '@netr/db': link:../db
       '@trpc/client': 10.0.0-proxy-beta.13_itipy43llokwyezwccgik4t2sm
       '@trpc/server': 10.0.0-proxy-beta.13

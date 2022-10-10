@@ -12,6 +12,7 @@
   "dependencies": {
     "@netr/front-api": "*",
     "@netr/db": "*",
+    "@netr/auth": "*",
     "@tanstack/react-query": "^4.7.2",
     "@trpc/client": "10.0.0-proxy-beta.13",
     "@trpc/next": "10.0.0-proxy-beta.13",
