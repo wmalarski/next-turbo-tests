@@ -4,3 +4,4 @@ packages:
   - packages/admin-api
   - packages/front-api
   - packages/db
+  - packages/auth
