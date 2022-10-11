@@ -1,6 +1,7 @@
 import type { AppRouterTypes } from "@netr/front-api";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { FormEvent } from "react";
 import { trpc } from "../utils/trpc";
 
 const PostCard: React.FC<{
@@ -15,7 +16,21 @@ const PostCard: React.FC<{
 };
 
 const Home: NextPage = () => {
+  const trpcContext = trpc.useContext();
   const postQuery = trpc.post.all.useQuery();
+  const mutation = trpc.post.create.useMutation({
+    onSuccess: () => {
+      trpcContext.post.all.invalidate();
+    },
+  });
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const title = data.get("title") as string;
+    const content = data.get("content") as string;
+    mutation.mutate({ content, title });
+  };
 
   return (
     <>
@@ -28,12 +43,17 @@ const Home: NextPage = () => {
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
           Create <span className="text-indigo-500">T3</span> Turbo
         </h1>
+        <form className="flex flex-col" onSubmit={handleSubmit}>
+          <input name="title" type="text" />
+          <input name="content" type="text" />
+          <button type="submit">Submit</button>
+        </form>
         <div className="flex items-center justify-center w-full pt-6 text-2xl text-blue-500">
           {postQuery.data ? (
             <div className="flex flex-col gap-4">
-              {postQuery.data?.map((p) => {
-                return <PostCard key={p.id} post={p} />;
-              })}
+              {postQuery.data?.map((p) => (
+                <PostCard key={p.id} post={p} />
+              ))}
             </div>
           ) : (
             <p>Loading..</p>
