@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "-----BUILD-----": "",
     "build": "next build",
-    "clean": "rm -rf .next .turbo node_modules",
     "start": "next start",
-    "lint": "next lint"
+    "-----DEV-----": "",
+    "dev": "next dev",
+    "-----LINT-----": "",
+    "lint": "next lint",
+    "-----UTILS-----": "",
+    "clean": "rm -rf .next .turbo node_modules"
   },
   "dependencies": {
     "@netr/admin-api": "*",
