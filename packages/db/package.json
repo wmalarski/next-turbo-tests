@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "prisma": "^4.4.0",
+    "eslint-config-custom": "*",
     "typescript": "^4.8.4"
   }
 }

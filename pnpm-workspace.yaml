@@ -5,3 +5,4 @@ packages:
   - packages/front-api
   - packages/db
   - packages/auth
+  - packages/eslint-config-custom

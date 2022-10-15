@@ -12,7 +12,9 @@
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
+    "classname",
     "cleen",
+    "cond",
     "manypkg",
     "netr",
     "superjson",

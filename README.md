@@ -7,7 +7,8 @@
 - [x] - auth package
 - [x] - db package
 - [ ] - design system package
-- [ ] - eslint + prettier setup
+- [x] - eslint + prettier package setup
+- [ ] - translations
 - [ ] - sign up
 - [ ] - sign in
 - [ ] - social login
