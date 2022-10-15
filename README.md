@@ -9,6 +9,7 @@
 - [ ] - db schema issue
 - [x] - design system package
 - [x] - eslint + prettier package setup
+- [x] - absolute imports
 - [x] - translations
 - [ ] - sign up
 - [ ] - sign in

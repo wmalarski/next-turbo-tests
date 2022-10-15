@@ -1,5 +1,5 @@
+import { trpc } from "@utils/trpc";
 import { ReactElement } from "react";
-import { trpc } from "../../utils/trpc";
 import { PostForm, PostFormData } from "./PostForm/PostForm";
 
 export const CreatePostForm = (): ReactElement => {

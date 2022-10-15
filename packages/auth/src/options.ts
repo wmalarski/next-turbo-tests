@@ -23,6 +23,7 @@ export const authOptions: NextAuthOptions = {
     }),
     CredentialsProvider({
       authorize: (credentials, req) => {
+        // eslint-disable-next-line no-console
         console.log("CredentialsProvider", { credentials, req });
 
         const user = { email: "jsmith@example.com", id: 1, name: "J Smith" };

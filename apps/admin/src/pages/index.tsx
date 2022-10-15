@@ -1,9 +1,9 @@
+import { Layout } from "@components/Layout/Layout";
 import type { AppRouterTypes } from "@netr/admin-api";
+import { trpc } from "@utils/trpc";
 import type { GetServerSideProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Layout } from "../components/Layout/Layout";
-import { trpc } from "../utils/trpc";
 
 const PostCard: React.FC<{
   post: AppRouterTypes["post"]["all"]["output"][number];

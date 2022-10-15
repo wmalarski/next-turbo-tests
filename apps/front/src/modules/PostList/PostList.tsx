@@ -1,6 +1,6 @@
+import { trpc } from "@utils/trpc";
 import { useTranslation } from "next-i18next";
 import { ReactElement } from "react";
-import { trpc } from "../../utils/trpc";
 import { PostListRow } from "./PostListRow/PostListRow";
 
 export const PostList = (): ReactElement => {

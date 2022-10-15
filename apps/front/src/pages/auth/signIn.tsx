@@ -1,9 +1,9 @@
+import { Layout } from "@components/Layout/Layout";
 import { useMutation } from "@tanstack/react-query";
 import type { GetServerSideProps, NextPage } from "next";
 import { signIn, useSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Layout } from "../../components/Layout/Layout";
 
 const SignIn: NextPage = () => {
   const { t } = useTranslation("common");
