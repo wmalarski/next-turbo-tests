@@ -6,9 +6,10 @@
 - [x] - api packages ready
 - [x] - auth package
 - [x] - db package
+- [ ] - db schema issue
 - [ ] - design system package
 - [x] - eslint + prettier package setup
-- [ ] - translations
+- [x] - translations
 - [ ] - sign up
 - [ ] - sign in
 - [ ] - social login

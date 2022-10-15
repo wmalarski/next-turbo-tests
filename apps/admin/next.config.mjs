@@ -1,4 +1,5 @@
 import withTM from "next-transpile-modules";
+import i18next from "./next-i18next.config.js";
 
 /**
  * Don't be scared of the generics here.
@@ -14,6 +15,7 @@ const defineNextConfig = (config) => {
 
 export default withTM(["@netr/admin-api", "@netr/auth", "@netr/db"])(
   defineNextConfig({
+    i18n: i18next.i18n,
     reactStrictMode: true,
     swcMinify: true,
   })
