@@ -7,7 +7,7 @@
 - [x] - auth package
 - [x] - db package
 - [ ] - db schema issue
-- [ ] - design system package
+- [x] - design system package
 - [x] - eslint + prettier package setup
 - [x] - translations
 - [ ] - sign up
