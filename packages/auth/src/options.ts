@@ -5,6 +5,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { env } from "./env";
 
 export const authOptions: NextAuthOptions = {
+  adapter: PrismaAdapter(prisma),
   callbacks: {
     session({ session, user }) {
       if (session.user) {
@@ -13,7 +14,6 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  adapter: PrismaAdapter(prisma),
   providers: [
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
