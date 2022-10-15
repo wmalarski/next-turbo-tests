@@ -45,7 +45,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="container flex flex-col items-center min-h-screen py-16 mx-auto">
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
-          Create <span className="text-indigo-500">T3</span> Turbo
+          Create <span className="text-blue-dark">T3</span> Turbo
         </h1>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <input name="title" type="text" />

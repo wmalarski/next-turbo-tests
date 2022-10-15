@@ -17,6 +17,7 @@
     "@netr/auth": "*",
     "@netr/db": "*",
     "@netr/front-api": "*",
+    "@netr/tailwind-preset": "*",
     "@tanstack/react-query": "^4.10.3",
     "@trpc/client": "10.0.0-proxy-beta.13",
     "@trpc/next": "10.0.0-proxy-beta.13",

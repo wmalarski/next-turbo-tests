@@ -19,6 +19,7 @@ importers:
       '@netr/admin-api': '*'
       '@netr/auth': '*'
       '@netr/db': '*'
+      '@netr/tailwind-preset': '*'
       '@tanstack/react-query': ^4.10.3
       '@trpc/client': 10.0.0-proxy-beta.13
       '@trpc/next': 10.0.0-proxy-beta.13
@@ -44,6 +45,7 @@ importers:
       '@netr/admin-api': link:../../packages/admin-api
       '@netr/auth': link:../../packages/auth
       '@netr/db': link:../../packages/db
+      '@netr/tailwind-preset': link:../../packages/tailwind-preset
       '@tanstack/react-query': 4.10.3_biqbaboplfbrettd7655fr4n2y
       '@trpc/client': 10.0.0-proxy-beta.13_itipy43llokwyezwccgik4t2sm
       '@trpc/next': 10.0.0-proxy-beta.13_tqqze5bsirofj6hbofikvfoiqa
@@ -72,6 +74,7 @@ importers:
       '@netr/auth': '*'
       '@netr/db': '*'
       '@netr/front-api': '*'
+      '@netr/tailwind-preset': '*'
       '@tanstack/react-query': ^4.10.3
       '@trpc/client': 10.0.0-proxy-beta.13
       '@trpc/next': 10.0.0-proxy-beta.13
@@ -97,6 +100,7 @@ importers:
       '@netr/auth': link:../../packages/auth
       '@netr/db': link:../../packages/db
       '@netr/front-api': link:../../packages/front-api
+      '@netr/tailwind-preset': link:../../packages/tailwind-preset
       '@tanstack/react-query': 4.10.3_biqbaboplfbrettd7655fr4n2y
       '@trpc/client': 10.0.0-proxy-beta.13_itipy43llokwyezwccgik4t2sm
       '@trpc/next': 10.0.0-proxy-beta.13_tqqze5bsirofj6hbofikvfoiqa
@@ -229,6 +233,9 @@ importers:
     devDependencies:
       eslint-config-custom: link:../eslint-config-custom
       typescript: 4.8.4
+
+  packages/tailwind-preset:
+    specifiers: {}
 
 packages:
 

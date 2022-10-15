@@ -2,7 +2,8 @@ packages:
   - apps/admin
   - apps/front
   - packages/admin-api
-  - packages/front-api
-  - packages/db
   - packages/auth
+  - packages/db
   - packages/eslint-config-custom
+  - packages/front-api
+  - packages/tailwind-preset
