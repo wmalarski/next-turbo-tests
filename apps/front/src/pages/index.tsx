@@ -2,7 +2,7 @@ import { Layout } from "@components/Layout/Layout";
 import { CreatePostForm } from "@modules/CreatePostForm/CreatePostForm";
 import { PostList } from "@modules/PostList/PostList";
 import type { GetServerSideProps, NextPage } from "next";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -20,6 +20,9 @@ const Home: NextPage = () => {
         <CreatePostForm />
         <PostList />
         <pre>{JSON.stringify(session, null, 2)}</pre>
+        {session.status === "authenticated" && (
+          <button onClick={() => signOut()}>{t("signOut")}</button>
+        )}
       </main>
     </Layout>
   );

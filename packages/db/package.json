@@ -11,6 +11,7 @@
     "lint": "eslint \"src/**/*.ts*\" --fix",
     "-----UTILS-----": "",
     "clean": "rm -rf .turbo node_modules",
+    "db-format": "prisma format",
     "db-push": "prisma db push",
     "postinstall": "prisma generate"
   },

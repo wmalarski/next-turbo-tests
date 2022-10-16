@@ -1,5 +1,5 @@
-import { t } from "../trpc";
 import { z } from "zod";
+import { protectedProcedure, t } from "../trpc";
 
 export const postRouter = t.router({
   all: t.procedure.query(({ ctx }) => {
@@ -8,9 +8,11 @@ export const postRouter = t.router({
   byId: t.procedure.input(z.string()).query(({ ctx, input }) => {
     return ctx.prisma.post.findFirst({ where: { id: input } });
   }),
-  create: t.procedure
+  create: protectedProcedure
     .input(z.object({ content: z.string(), title: z.string() }))
     .mutation(({ ctx, input }) => {
-      return ctx.prisma.post.create({ data: input });
+      return ctx.prisma.post.create({
+        data: { ...input, userId: ctx.user.id },
+      });
     }),
 });

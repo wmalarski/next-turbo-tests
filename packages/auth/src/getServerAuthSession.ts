@@ -1,10 +1,10 @@
 import type { GetServerSidePropsContext } from "next";
-import { unstable_getServerSession } from "next-auth";
+import { Session, unstable_getServerSession } from "next-auth";
 import { authOptions as nextAuthOptions } from "./options";
 
-export const getServerAuthSession = async (ctx: {
+export const getServerAuthSession = (ctx: {
   req: GetServerSidePropsContext["req"];
   res: GetServerSidePropsContext["res"];
-}) => {
-  return await unstable_getServerSession(ctx.req, ctx.res, nextAuthOptions);
+}): Promise<Session | null> => {
+  return unstable_getServerSession(ctx.req, ctx.res, nextAuthOptions);
 };
