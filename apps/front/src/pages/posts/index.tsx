@@ -1,13 +1,12 @@
 import { Layout } from "@components/Layout/Layout";
+import { CreatePostForm } from "@modules/CreatePostForm/CreatePostForm";
+import { PostList } from "@modules/PostList/PostList";
 import type { GetServerSideProps, NextPage } from "next";
-import { useSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const Home: NextPage = () => {
+const Posts: NextPage = () => {
   const { t } = useTranslation("common");
-
-  const session = useSession();
 
   return (
     <Layout title={t("title")}>
@@ -15,7 +14,8 @@ const Home: NextPage = () => {
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">
           Create <span className="text-blue-dark">T3</span> Turbo
         </h1>
-        <pre>{JSON.stringify(session, null, 2)}</pre>
+        <CreatePostForm />
+        <PostList />
       </main>
     </Layout>
   );
@@ -29,4 +29,4 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   };
 };
 
-export default Home;
+export default Posts;

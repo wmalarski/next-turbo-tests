@@ -1,4 +1,5 @@
 import { paths } from "@utils/paths";
+import { signOut, useSession } from "next-auth/react";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,6 +12,9 @@ type Props = {
 
 export const Layout = ({ children, title }: Props): ReactElement => {
   const { t } = useTranslation();
+
+  const session = useSession();
+
   return (
     <>
       <Head>
@@ -20,8 +24,18 @@ export const Layout = ({ children, title }: Props): ReactElement => {
       </Head>
       <nav>
         <Link href={paths.index}>{t("Index")}</Link>
-        <Link href={paths.signIn}>{t("Sign In")}</Link>
-        <Link href={paths.signUp}>{t("Sign Up")}</Link>
+        {session.status === "unauthenticated" && (
+          <>
+            <Link href={paths.signIn}>{t("Sign In")}</Link>
+            <Link href={paths.signUp}>{t("Sign Up")}</Link>
+          </>
+        )}
+        {session.status === "authenticated" && (
+          <>
+            <Link href={paths.posts}>{t("Posts")}</Link>
+            <button onClick={() => signOut()}>{t("signOut")}</button>
+          </>
+        )}
       </nav>
       {children}
     </>
