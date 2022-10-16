@@ -40,4 +40,5 @@ export const authOptions: NextAuthOptions = {
       name: "Credentials",
     }),
   ],
+  secret: env.NEXTAUTH_SECRET,
 };

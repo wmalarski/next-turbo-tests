@@ -16,7 +16,7 @@
 - [ ] - sign out
 - [x] - social login
 - [ ] - forgot password
-- [ ] - protected pages using middleware
+- [x] - protected pages using middleware
 - [x] - protected trpc routes
 - [ ] - pusher setup
 - [x] - user and post tables
