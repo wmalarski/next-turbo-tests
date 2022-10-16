@@ -13,13 +13,15 @@
 - [x] - translations
 - [ ] - sign up
 - [ ] - sign in
-- [ ] - social login
+- [ ] - sign out
+- [x] - social login
 - [ ] - forgot password
 - [ ] - protected pages using middleware
-- [ ] - protected trpc routes
+- [x] - protected trpc routes
 - [ ] - pusher setup
-- [ ] - user and post tables
+- [x] - user and post tables
 - [ ] - invalidate queries using pusher
+- [ ] - vanilla-extract setup
 
 ## About
 

@@ -19,6 +19,7 @@ export const Layout = ({ children, title }: Props): ReactElement => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav>
+        <Link href={paths.index}>{t("Index")}</Link>
         <Link href={paths.signIn}>{t("Sign In")}</Link>
         <Link href={paths.signUp}>{t("Sign Up")}</Link>
       </nav>
